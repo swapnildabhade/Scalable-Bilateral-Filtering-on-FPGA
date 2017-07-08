@@ -1,0 +1,17 @@
+Requirments:
+Vivado 2015.3 or above
+Matlab R2010 or above
+
+Run using vivado:
+
+Create new project
+#TODO process
+ADD source file
+ADD constraint file (use proper constraint file)
+ADD simulation file
+ADD IP file
+goto sources window, right click and select <copy all resources in project>
+#TODO generate core ip
+#TODO functional simulation process
+#TODO synthesis process
+#TODO Implimentation process
