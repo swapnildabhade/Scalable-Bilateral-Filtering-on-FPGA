@@ -1,9 +1,6 @@
-# Scalable-Bilateral-Filtering-on-FPGA (Under Developement)
+# Scalable-Bilateral-Filtering-on-FPGA
 
 VHDL implimentation of A Reconfigurable and Scalable FPGA Architecture for Bilateral Filtering.
-
-VHDL code for bilateral filtering with test enviorment will be added soon...
-
 
 Refrences:
 

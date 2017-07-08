@@ -4,14 +4,51 @@ Matlab R2010 or above
 
 Run using vivado:
 
+Vivado Initalizing-
+Open Vivado
 Create new project
-#TODO process
-ADD source file
-ADD constraint file (use proper constraint file)
-ADD simulation file
-ADD IP file
-goto sources window, right click and select <copy all resources in project>
-#TODO generate core ip
-#TODO functional simulation process
-#TODO synthesis process
-#TODO Implimentation process
+Click next
+Set Project location as <current source foler>
+Click next
+Select RTL project
+Click next
+Add files in source code, tick copy sources into folder
+targate language: VHDL Silumator language: VHDL
+Click next
+Add files in IP folder
+Click next
+Add files in constraint folder
+Select Boards: ZYNQ7-ZC706 Evaluation Board
+Click next
+Click finish
+
+Generate core ip-
+Goto sources window in Project Manager in Vivado
+Right click to ip and select 'Upgrade IP'
+Tick 'convert ip to core container'
+'Generage Output Product window will Popup'
+Click Generate to genetate IP
+Do this for all IP blocks
+
+Setup GPA Filtering Parameter-
+goto line no 70 gpf_main.vhd
+set img_s as image width (m)
+set win_s as kernal size (w*w)
+set sigr as spatial kernal parms (sigma_r)
+set Nmax as Filtering order (N)
+
+Functional simulation process-
+Genegate test binary file from test image as shown in 'img_in.txt'
+You can use matlab file 'image_gen.m' to generate it.
+Copy img_out.txt to sim/ folder.
+Run behaveral simulation.
+It will 'img_out.txt' file in sim/ folder.
+You can read 'img_out.txt' file 'image_read.m' to read and display output file.
+
+Synthesis and Implimentation process-
+Run systhesis and wait till it completes
+Open synthesis design put Timing constrain and set clock frequency
+Note post synthesis results
+Run implimentation and wait till it complets
+Note post implimentation resource consumption and timing 
+
